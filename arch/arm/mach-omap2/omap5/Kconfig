@@ -45,6 +45,9 @@ config TARGET_AM57XX_EVM
 	imply DM_THERMAL
 	imply TI_DRA7_THERMAL
 
+config TARGET_LETUX_CORTEX15
+	bool "Letux Cortex 15 SoM"
+
 endchoice
 
 config SYS_SOC
