@@ -79,7 +79,6 @@ int palmas_mmc1_poweron_ldo(uint ldo_volt, uint ldo_ctrl, uint voltage)
  */
 int twl603x_mmc1_set_ldo9(u8 vsel)
 {
-	printf("twl603x_mmc1_set_ldo9 %d\n", vsel);
 	u8 cval = 0, vval = 0;	/* Off by default */
 	int err;
 
