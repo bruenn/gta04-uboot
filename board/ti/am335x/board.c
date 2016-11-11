@@ -909,7 +909,7 @@ int board_eth_init(bd_t *bis)
 
 #ifdef CONFIG_DRIVER_TI_CPSW
 	if (board_is_bone() || board_is_bone_lt() ||
-	    board_is_idk()) {
+	    board_is_idk() || board_is_osd3358()) {
 		writel(MII_MODE_ENABLE, &cdev->miisel);
 		cpsw_slaves[0].phy_if = cpsw_slaves[1].phy_if =
 				PHY_INTERFACE_MODE_MII;
