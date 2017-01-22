@@ -6,6 +6,7 @@
  * Aneesh V <aneesh@ti.com>
  */
 
+#define DEBUG
 #include <common.h>
 #include <binman_sym.h>
 #include <dm.h>
