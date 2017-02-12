@@ -148,6 +148,15 @@ config USB_FUNCTION_SDP
 	  allows to download images into memory and execute (jump to) them
 	  using the same protocol as implemented by the i.MX family's boot ROM.
 
+config G_DNL_MANUFACTURER
+	string "Vendor name of USB device"
+
+config G_DNL_PRODUCT
+	string "Product name of USB device"
+
+config G_DNL_VENDOR_NUM
+	hex "Vendor ID of USB device"
+
 config USB_FUNCTION_THOR
 	bool "Enable USB THOR gadget"
 	help
