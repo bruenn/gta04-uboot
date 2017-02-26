@@ -193,6 +193,9 @@ void early_system_init(void)
 	 * to prevent overwrites.
 	 */
 	save_omap_boot_params();
+	/* a hack to get the console early */
+	asm volatile("ldr r0,=preloader_console_init; blx r0"
+		::: "r0", "r1", "r2", "r3", "lr", "memory");
 #endif
 	do_board_detect();
 #ifdef CONFIG_SPL_BUILD
