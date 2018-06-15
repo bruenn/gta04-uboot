@@ -66,7 +66,7 @@ void emif_get_reg_dump(u32 emif_nr, const struct emif_regs **regs)
 	*regs = &emif_regs_ddr3_532_mhz_2cs_es2;
 }
 
-void dram_init_banksize(void)
+int dram_init_banksize(void)
 { /* make U-Boot pass the same as bootarg "mem=2032M@0x80000000 mem=2048M@0x200000000" would do */
 	gd->bd->bi_dram[0].start = CONFIG_SYS_SDRAM_BASE;	// == 0x80000000
 	gd->bd->bi_dram[0].size = 2032*(1024UL*1024);		// first 2GB
@@ -78,6 +78,7 @@ void dram_init_banksize(void)
 #endif
 	/* report 4 GB during boot */
 	gd->ram_size = gd->bd->bi_dram[0].size + gd->bd->bi_dram[1].size;
+	return 0;
 }
 #endif
 
@@ -182,7 +183,7 @@ static void set_fdtfile(void)
 	CONFIG_MORE_FDT(devtree);	/* for main board detection */
 	}
 #endif
-	setenv("fdtfile", devtree);
+	//setenv("fdtfile", devtree);
 
 	printf("Device Tree: %s\n", devtree);
 }

@@ -4,6 +4,7 @@
  * differently
  */
 
+#include <asm/mach-types.h>
 /* move away definition by included file */
 #define board_init board_init_overwritten
 #define set_muxconf_regs set_muxconf_regs_inherited

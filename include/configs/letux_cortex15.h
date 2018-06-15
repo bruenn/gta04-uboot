@@ -30,16 +30,14 @@
 #undef CONFIG_ENV_OFFSET
 #endif
 
+#define CONFIG_SYS_NS16550_COM1            UART1_BASE      /* Base EVM has UART0 */
+
 #ifdef CONFIG_DUAL_RANK_DDR3
 #undef CONFIG_NR_DRAM_BANKS
 #define CONFIG_NR_DRAM_BANKS	2
 #endif
 
 /* should this better go to omap5_uevm? */
-
-#ifdef CONFIG_USB_GADGET
-#define CONFIG_USB_FUNCTION_MASS_STORAGE
-#endif
 
 #define CONFIG_SCSI
 #define CONFIG_LIBATA
