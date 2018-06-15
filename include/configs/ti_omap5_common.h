@@ -84,21 +84,6 @@
 #define CONFIG_SYS_MEMTEST_END		0xdf000000	/* up to here */
 #define CONFIG_SYS_ALT_MEMTEST
 
-#define CONFIG_BOOTCOMMAND \
-	"echo Letux OMAP5 bootcmd;" \
-	"if test ${dofastboot} -eq 1; then " \
-		"echo Boot fastboot requested, resetting dofastboot ...;" \
-		"setenv dofastboot 0; saveenv;" \
-		"echo Booting into fastboot ...; fastboot 0;" \
-	"fi;" \
-	"run findfdt; " \
-	"run envboot; " \
-	"setenv mmcdev 0; " \
-	"run mmcboot;" \
-	"setenv mmcdev 1; " \
-	"run mmcboot;" \
-	""
-
 /*
  * SPL related defines.  The Public RAM memory map the ROM defines the
  * area between 0x40300000 and 0x4031E000 as a download area for OMAP5.
