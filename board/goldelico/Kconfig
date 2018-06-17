@@ -1,6 +1,0 @@
-source "board/goldelico/letux-gta04/Kconfig"
-source "board/goldelico/letux-gta04-b2/Kconfig"
-source "board/goldelico/letux-gta04-b3/Kconfig"
-source "board/goldelico/letux-gta04-b4/Kconfig"
-source "board/goldelico/letux-gta04-b7/Kconfig"
-source "board/goldelico/letux-gta04-b8/Kconfig"
