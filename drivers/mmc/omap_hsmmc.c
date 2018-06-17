@@ -1492,12 +1492,12 @@ int omap_mmc_init(int dev_index, uint host_caps_mask, uint f_max, int cd_gpio,
 #endif
 #ifdef OMAP_HSMMC4_BASE
 	case 3:
-		priv_data->base_addr = (struct hsmmc *)OMAP_HSMMC4_BASE;
+		priv->base_addr = (struct hsmmc *)OMAP_HSMMC4_BASE;
 		break;
 #endif
 #ifdef OMAP_HSMMC5_BASE
 	case 4:
-		priv_data->base_addr = (struct hsmmc *)OMAP_HSMMC5_BASE;
+		priv->base_addr = (struct hsmmc *)OMAP_HSMMC5_BASE;
 		/* Enable 8-bit interface for eMMC on OMAP5 */
 		host_caps_val |= MMC_MODE_8BIT;
 		break;
