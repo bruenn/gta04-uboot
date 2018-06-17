@@ -2,6 +2,7 @@
  * basically the same as the OMAP5432EVM
  */
 
+#include <asm/gpio.h>
 /* move away definition by included file */
 #define board_mmc_init board_mmc_init_inherited
 #define misc_init_r misc_init_r_inherited
