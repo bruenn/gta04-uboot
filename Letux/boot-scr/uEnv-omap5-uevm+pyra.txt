@@ -1,5 +1,0 @@
-fdtfile=omap5-uevm+pyra4.dtb
-
-bootdir=/
-bootfile=uImage
-bootfilecmd=bootm
